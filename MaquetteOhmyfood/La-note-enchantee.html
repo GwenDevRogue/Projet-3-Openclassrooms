@@ -23,11 +23,17 @@
                 <section class="menu">
                     <header class="menu__header">
                         <h2>La note enchantée</h2>
-                        <i class="fa-regular fa-heart"></i>
+                        <div class="icone__banniere">
+                            <i class="fa-regular fa-heart"></i>
+                            <div class="icone__banniere__fav">
+                                <i class="fa-sharp fa-solid fa-heart"></i>
+                            </div>
+                        </div>
                     </header>
                     <div class="bloc-plats">
                         <article class="Plats">
                             <h3>Entrées</h3>
+                            <div class="barre"></div>
                             <div class="Plats__choix">
                                 <div class="texte">
                                     <h4>Ravioles de foie gras</h4>
@@ -79,6 +85,7 @@
                         </article>
                         <article class="Plats">
                             <h3>Plats</h3>
+                            <div class="barre"></div>
                             <div class="Plats__choix">
                                 <div class="texte">
                                     <h4>Noix de coquilles Saint-Jacques</h4>
@@ -118,6 +125,7 @@
                         </article>
                         <article class="Plats">
                             <h3>Desserts</h3>
+                            <div class="barre"></div>
                             <div class="Plats__choix">
                                 <div class="texte">
                                     <h4>Macaron noisette et chocolat</h4>
@@ -163,12 +171,20 @@
             </main>
             <footer>
                 <h2>ohmyFood</h2>
-                <ul>
-                    <li><a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
-                    <li><a href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a></li>
-                    <li><a href="#">Mentions légales</a></li>
-                    <li><a href="mailto:ohmyfood@gmail.com">Contact</a></li>
-                </ul>
+                <div class="block-lien">
+                    <div class="lien-footer">
+                        <div class="icone"><i class="fa-solid fa-utensils"></i></div><p><a href="#">Proposer un restaurant</a></p>
+                    </div>
+                    <div class="lien-footer">
+                        <div class="icone"><i class="fa-solid fa-handshake-angle"></i></div><p><a href="#">Devenir partenaire</a></p>
+                    </div>
+                    <div class="lien-footer">
+                        <p><a href="#">Mentions légales</a></p>
+                    </div>
+                    <div class="lien-footer">
+                        <p><a href="mailto:ohmyfood@gmail.com">Contact</a></p>
+                    </div>
+                </div>
             </footer>
         </div>
     </body>
