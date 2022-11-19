@@ -325,7 +325,7 @@ figure p {
 }
 .icone__banniere__fav {
   position: absolute;
-  color: #FF99FF;
+  background: linear-gradient(350deg, #9356DC 0%, #FF79DA 100%);
   opacity: 0;
   z-index: -1;
 }
@@ -423,15 +423,33 @@ figure p {
   border-radius: 12px;
   background-color: white;
   box-shadow: 2px 2px 6px gray;
+  overflow: hidden;
   cursor: pointer;
 }
+.Plats__choix:hover > .logo-valide {
+  transform: translate(0);
+  display: flex;
+}
+.Plats__choix:hover > .logo-valide i {
+  transform: rotate(0deg);
+}
+@media (min-width: 900px) {
+  .Plats__choix {
+    margin-bottom: 30px;
+  }
+}
 .Plats__choix .texte {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 1;
   padding-left: 10px;
   border-radius: 12px 0px 0px 12px;
-  width: 60%;
+  max-width: 80%;
+  min-width: 60%;
 }
 .Plats__choix .texte h4 {
-  display: block;
+  display: flex;
   margin-top: 15px;
   margin-bottom: 4px;
   font-size: 18px;
@@ -440,7 +458,7 @@ figure p {
   text-overflow: ellipsis;
 }
 .Plats__choix .texte p {
-  display: block;
+  display: flex;
   margin-top: 0px;
   margin-bottom: 15px;
   font-size: 15px;
@@ -453,14 +471,15 @@ figure p {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  width: 20%;
+  max-width: 40%;
+  min-width: 20%;
 }
 .Plats__choix .prix p {
   font-size: 15px;
   font-weight: 700;
 }
 .Plats__choix .logo-valide {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   width: 20%;
@@ -468,6 +487,15 @@ figure p {
   background-color: #99E2D0;
   color: white;
   border-radius: 0px 12px 12px 0px;
+  transform: translate(100%);
+  transition-delay: 600ms;
+}
+.Plats__choix .logo-valide i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(180deg);
+  transition-delay: 1s;
 }
 
 @-webkit-keyframes apparition {
