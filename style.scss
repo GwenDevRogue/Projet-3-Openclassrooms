@@ -45,6 +45,66 @@ body{
 
 }
 
+.loader{
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 1;
+    animation: Load 4s ease-out reverse;
+    visibility: hidden;
+}
+
+@keyframes Load{
+    from {
+        opacity:0;
+        transform: matrix(100%);
+        transition: transform;
+    }
+    to {
+        visibility: inherit;
+        opacity: 1;
+        transform: matrix(0%);
+    }
+}
+
+$size: 10px;
+$num-bars: 5;
+$anim-dur: 1000ms;
+$anim-delay: $anim-dur / $num-bars;
+
+.load {
+    width: $size*10;
+    height: $size*7.5;
+    display: flex;
+    justify-content: space-evenly;
+    &__bar {
+        background: linear-gradient(0deg, $color-primary,$color-secondary,$color-tertiary);
+        height: 100%;
+        width: 10px;
+        animation: bars $anim-dur backwards infinite ease-in-out alternate;
+        @for $i from 1 through $num-bars {
+            &--#{$i} {
+                animation-delay: $anim-delay * $i;
+             }
+        }
+    }
+}
+
+
+@keyframes bars {
+    0% {
+        transform: scaleY(0.5);
+        
+    }
+    100% {
+        transform: scaleY(1.0);
+    }
+}
+
 header{
     @include mise-en-forme;
     h1 {
@@ -310,6 +370,7 @@ figure{
     color: black;
     z-index: 1;
     opacity: 1;
+    transition: 600ms;
         &:hover{
             color: transparent;
             & .icone__banniere__fav{
@@ -475,14 +536,14 @@ figure{
         color: white;
         border-radius: 0px 12px 12px 0px;
         transform: translate(100%);
-        transition-delay: 600ms;
+        transition: transform 600ms ease-in-out, display 600ms ease-in-out;
     
         i{
             display: flex;
             justify-content: center;
             align-items: center;
             transform: rotate(180deg);
-            transition-delay: 1s;
+            transition: transform 600ms;
         }
     }
 }
@@ -502,6 +563,7 @@ figure{
 .choix__1{
     animation: apparition 0.8s ease-in-out;
     transform-origin: bottom;
+    animation-delay: 100ms;
 }
 .choix__2{
     animation: apparition 0.8s ease-in-out;

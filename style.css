@@ -34,6 +34,95 @@ body {
   }
 }
 
+.loader {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 1;
+  animation: Load 4s ease-out reverse;
+  visibility: hidden;
+}
+
+@-webkit-keyframes Load {
+  from {
+    opacity: 0;
+    transform: matrix(100%);
+    transition: transform;
+  }
+  to {
+    visibility: inherit;
+    opacity: 1;
+    transform: matrix(0%);
+  }
+}
+
+@keyframes Load {
+  from {
+    opacity: 0;
+    transform: matrix(100%);
+    transition: transform;
+  }
+  to {
+    visibility: inherit;
+    opacity: 1;
+    transform: matrix(0%);
+  }
+}
+.load {
+  width: 100px;
+  height: 75px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.load__bar {
+  background: linear-gradient(0deg, #9356DC, #FF79DA, #99E2D0);
+  height: 100%;
+  width: 10px;
+  -webkit-animation: bars 1000ms backwards infinite ease-in-out alternate;
+          animation: bars 1000ms backwards infinite ease-in-out alternate;
+}
+.load__bar--1 {
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+}
+.load__bar--2 {
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
+}
+.load__bar--3 {
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
+}
+.load__bar--4 {
+  -webkit-animation-delay: 800ms;
+          animation-delay: 800ms;
+}
+.load__bar--5 {
+  -webkit-animation-delay: 1000ms;
+          animation-delay: 1000ms;
+}
+
+@-webkit-keyframes bars {
+  0% {
+    transform: scaleY(0.5);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes bars {
+  0% {
+    transform: scaleY(0.5);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
 header {
   display: flex;
   justify-content: center;
@@ -316,6 +405,7 @@ figure p {
   color: black;
   z-index: 1;
   opacity: 1;
+  transition: 600ms;
 }
 .icone__banniere:hover {
   color: transparent;
@@ -488,14 +578,14 @@ figure p {
   color: white;
   border-radius: 0px 12px 12px 0px;
   transform: translate(100%);
-  transition-delay: 600ms;
+  transition: transform 600ms ease-in-out, display 600ms ease-in-out;
 }
 .Plats__choix .logo-valide i {
   display: flex;
   justify-content: center;
   align-items: center;
   transform: rotate(180deg);
-  transition-delay: 1s;
+  transition: transform 600ms;
 }
 
 @-webkit-keyframes apparition {
@@ -525,6 +615,8 @@ figure p {
   -webkit-animation: apparition 0.8s ease-in-out;
           animation: apparition 0.8s ease-in-out;
   transform-origin: bottom;
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
 }
 
 .choix__2 {
