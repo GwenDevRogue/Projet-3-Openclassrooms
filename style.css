@@ -50,26 +50,26 @@ body {
 @-webkit-keyframes Load {
   from {
     opacity: 0;
-    transform: matrix(100%);
+    transform: scaleZ(0.3);
     transition: transform;
   }
   to {
     visibility: inherit;
     opacity: 1;
-    transform: matrix(0%);
+    transform: scaleZ(0);
   }
 }
 
 @keyframes Load {
   from {
     opacity: 0;
-    transform: matrix(100%);
+    transform: scaleZ(0.3);
     transition: transform;
   }
   to {
     visibility: inherit;
     opacity: 1;
-    transform: matrix(0%);
+    transform: scaleZ(0);
   }
 }
 .load {
@@ -615,11 +615,25 @@ figure p {
   -webkit-animation: apparition 0.8s ease-in-out;
           animation: apparition 0.8s ease-in-out;
   transform-origin: bottom;
+}
+
+.choix__2 {
+  -webkit-animation: apparition 0.8s ease-in-out;
+          animation: apparition 0.8s ease-in-out;
+  transform-origin: bottom;
   -webkit-animation-delay: 100ms;
           animation-delay: 100ms;
 }
 
-.choix__2 {
+.choix__3 {
+  -webkit-animation: apparition 0.8s ease-in-out;
+          animation: apparition 0.8s ease-in-out;
+  transform-origin: bottom;
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+}
+
+.choix__4 {
   -webkit-animation: apparition 0.8s ease-in-out;
           animation: apparition 0.8s ease-in-out;
   transform-origin: bottom;
@@ -627,7 +641,23 @@ figure p {
           animation-delay: 300ms;
 }
 
-.choix__3 {
+.choix__5 {
+  -webkit-animation: apparition 0.8s ease-in-out;
+          animation: apparition 0.8s ease-in-out;
+  transform-origin: bottom;
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
+}
+
+.choix__6 {
+  -webkit-animation: apparition 0.8s ease-in-out;
+          animation: apparition 0.8s ease-in-out;
+  transform-origin: bottom;
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
+}
+
+.choix__7 {
   -webkit-animation: apparition 0.8s ease-in-out;
           animation: apparition 0.8s ease-in-out;
   transform-origin: bottom;
@@ -635,52 +665,28 @@ figure p {
           animation-delay: 600ms;
 }
 
-.choix__4 {
-  -webkit-animation: apparition 0.8s ease-in-out;
-          animation: apparition 0.8s ease-in-out;
-  transform-origin: bottom;
-  -webkit-animation-delay: 900ms;
-          animation-delay: 900ms;
-}
-
-.choix__5 {
-  -webkit-animation: apparition 0.8s ease-in-out;
-          animation: apparition 0.8s ease-in-out;
-  transform-origin: bottom;
-  -webkit-animation-delay: 1200ms;
-          animation-delay: 1200ms;
-}
-
-.choix__6 {
-  -webkit-animation: apparition 0.8s ease-in-out;
-          animation: apparition 0.8s ease-in-out;
-  transform-origin: bottom;
-  -webkit-animation-delay: 1500ms;
-          animation-delay: 1500ms;
-}
-
-.choix__7 {
-  -webkit-animation: apparition 0.8s ease-in-out;
-          animation: apparition 0.8s ease-in-out;
-  transform-origin: bottom;
-  -webkit-animation-delay: 1800ms;
-          animation-delay: 1800ms;
-}
-
 .choix__8 {
   -webkit-animation: apparition 0.8s ease-in-out;
           animation: apparition 0.8s ease-in-out;
   transform-origin: bottom;
-  -webkit-animation-delay: 2100ms;
-          animation-delay: 2100ms;
+  -webkit-animation-delay: 700ms;
+          animation-delay: 700ms;
 }
 
 .choix__9 {
   -webkit-animation: apparition 0.8s ease-in-out;
           animation: apparition 0.8s ease-in-out;
   transform-origin: bottom;
-  -webkit-animation-delay: 2400ms;
-          animation-delay: 2400ms;
+  -webkit-animation-delay: 800ms;
+          animation-delay: 800ms;
+}
+
+.choix__10 {
+  -webkit-animation: apparition 0.8s ease-in-out;
+          animation: apparition 0.8s ease-in-out;
+  transform-origin: bottom;
+  -webkit-animation-delay: 900ms;
+          animation-delay: 900ms;
 }
 
 footer {
