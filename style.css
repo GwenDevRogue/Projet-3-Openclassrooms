@@ -646,6 +646,16 @@ figure p {
   margin-bottom: 10px;
   margin-top: 0px;
 }
+@media (min-width: 500px) {
+  .menu .barre {
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 900px) {
+  .menu .barre {
+    margin-bottom: 20px;
+  }
+}
 .menu form {
   display: flex;
   justify-content: center;
@@ -677,9 +687,14 @@ figure p {
 .Plats__choix:hover > .logo-valide i {
   transform: rotate(0deg);
 }
+@media (min-width: 500px) {
+  .Plats__choix {
+    margin-bottom: 20px;
+  }
+}
 @media (min-width: 900px) {
   .Plats__choix {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 }
 .Plats__choix .texte {

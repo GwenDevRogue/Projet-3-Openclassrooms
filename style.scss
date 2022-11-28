@@ -490,6 +490,12 @@ figure{
         margin-left: 5px;
         margin-bottom: 10px;
         margin-top: 0px;
+        @media (min-width: 500px) {
+            margin-bottom: 20px;
+        }
+        @media (min-width: 900px) {
+            margin-bottom: 20px;
+        }
     }
     form{
         display: flex;
@@ -522,8 +528,12 @@ figure{
             transform: rotate(0deg);
         }
     }
+    @media (min-width: 500px) {
+        margin-bottom: 20px;
+    }
+
     @media (min-width: 900px) {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
     .texte{
         display: flex;
