@@ -4,6 +4,7 @@
 @import "./utils/keyframes";
 
 body{
+    display: flex;
     margin: 0px;
     padding: 0px;
     justify-content: center;
@@ -11,11 +12,9 @@ body{
     width: 100%;
 }
 .bloc_page{
-    max-width: 499px;
+    width: 100%;
     padding: 0px;
     margin: 0px;
-    justify-content: center;
-    align-items: center;
     font-family: 'Roboto', sans-serif;
     a{
         text-decoration: none;
@@ -27,7 +26,7 @@ body{
         
     }
     @media (min-width: 900px) {
-        max-width: 1500px;
+        max-width: 1800px;
         padding: 0px;
         margin: 0px;
         

@@ -103,6 +103,7 @@
   }
 }
 body {
+  display: flex;
   margin: 0px;
   padding: 0px;
   justify-content: center;
@@ -111,11 +112,9 @@ body {
 }
 
 .bloc_page {
-  max-width: 499px;
+  width: 100%;
   padding: 0px;
   margin: 0px;
-  justify-content: center;
-  align-items: center;
   font-family: "Roboto", sans-serif;
 }
 .bloc_page a {
@@ -130,7 +129,7 @@ body {
 }
 @media (min-width: 900px) {
   .bloc_page {
-    max-width: 1500px;
+    max-width: 1800px;
     padding: 0px;
     margin: 0px;
   }
