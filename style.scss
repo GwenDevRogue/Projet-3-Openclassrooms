@@ -1,17 +1,7 @@
 @import url('https://fonts.googleapis.com/css2? family= Shrikhand & display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&family=Shrikhand&display=swap');
-
-@mixin mise-en-forme{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-$color-primary:#9356DC;
-$color-secondary:#FF79DA;
-$color-tertiary:#99E2D0;
-$color-texte:linear-gradient(0deg, #9356DC,#FF79DA);
+@import "./utils/variables";
+@import "./utils/keyframes";
 
 body{
     margin: 0px;
@@ -21,7 +11,7 @@ body{
     width: 100%;
 }
 .bloc_page{
-    max-width: 400px;
+    max-width: 499px;
     padding: 0px;
     margin: 0px;
     justify-content: center;
@@ -32,8 +22,8 @@ body{
     }
     @media (min-width: 500px) {
         max-width: 900px;
-    padding: 0px;
-    margin: 0px;
+        padding: 0px;
+        margin: 0px;
         
     }
     @media (min-width: 900px) {
@@ -52,29 +42,11 @@ body{
     align-items: center;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.9);
     z-index: 1;
-    animation: Load 4s ease-out reverse;
+    animation: Load 3s ease-out reverse;
     visibility: hidden;
 }
-
-@keyframes Load{
-    from {
-        opacity:0;
-        transform: scaleZ(0.3);
-        transition: transform;
-    }
-    to {
-        visibility: inherit;
-        opacity: 1;
-        transform: scaleZ(0);
-    }
-}
-
-$size: 10px;
-$num-bars: 5;
-$anim-dur: 1000ms;
-$anim-delay: $anim-dur / $num-bars;
 
 .load {
     width: $size*10;
@@ -94,17 +66,6 @@ $anim-delay: $anim-dur / $num-bars;
     }
 }
 
-
-@keyframes bars {
-    0% {
-        transform: scaleY(0.5);
-        
-    }
-    100% {
-        transform: scaleY(1.0);
-    }
-}
-
 header{
     @include mise-en-forme;
     h1 {
@@ -114,7 +75,7 @@ header{
         margin: 5px;
         margin-top: 0;
         margin-bottom: 0;
-        font-size: 30px;
+        font-size: 34px;
         font-style: normal;
         box-shadow: 0 0 20px rgba(0,0,0,0.2);
         @media (min-width: 900px) {
@@ -157,9 +118,16 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
     background-color: #EAEAEA;
+    p{
+        margin-right: 30px;
+        font-size:18px; 
+    }
     i{
-        padding-right: 20px;
+        color: black;
+        margin-right: 20px;
+        font-size:18px;
     }
 }
 
@@ -200,7 +168,7 @@ header{
     &:hover {
         transform: scale(1.05);
         box-shadow: 2px 2px 6px gray;
-        background-image: linear-gradient(0deg, #B268FF,#FF99FF)
+        background-image: linear-gradient(0deg, #b37bf8,#fa90dc)
     }
 }
 
@@ -215,7 +183,15 @@ header{
     ul{
         margin: 0px;
         padding: 0px;
-        width: 100%;
+        padding-left: 10px;
+        width: 97%;
+        @media (min-width: 500px) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: baseline;
+            width: 100%;
+        }
         @media (min-width: 900px) {
             display: flex;
             flex-direction: row;
@@ -238,15 +214,43 @@ header{
         font-weight: 600;
         color: black;
         cursor: pointer;
+        @media (min-width: 500px) {
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+            padding-left: 5px;
+            padding-right: 5px;
+            width: 100%;
+            text-align: center;
+        }
         @media (min-width: 900px) {
+            flex-direction: row;
             margin: 20px;
             width: 25%;
+            align-items: baseline;
+            background-color: #F8F8F8;
+            margin-bottom: 20px;
+            padding: 25px;
         }
     }
     i{
         margin-right: 20px;
         padding: 0;
         color: grey;
+        @media (min-width: 500px) {
+            padding: 0;
+            margin-right: 0px;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            font-size: 28px;
+        }
+        @media (min-width: 900px) {
+            margin-right: 20px;
+            margin-top: auto;
+            margin-bottom: auto;
+            font-size: 18px;
+        }
+
     }
     .numero{
         margin-left: -35px;
@@ -255,7 +259,16 @@ header{
         color: white;
         border-radius: 50px;
         padding: 2px 7px 2px 7px;
-        
+        @media (min-width: 500px) {
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-top: -35px;
+        }
+        @media (min-width: 900px) {
+            margin-left: -35px;
+            margin-right: 25px;
+            margin-top: auto;
+        }
     }
 
 }
@@ -286,6 +299,9 @@ header{
         &:hover {
             transform: scale(1.02);
         } 
+        @media (min-width: 500px) {
+            margin: 20px;
+        }
         @media (min-width: 900px) {
             margin: 15px 15px 60px 15px;
         }
@@ -351,6 +367,12 @@ figure{
     display: flex;
     flex-direction: column;
     width: 100%;
+    @media (min-width: 500px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+    }
     @media (min-width: 900px) {
         display: flex;
         flex-direction: row;
@@ -358,9 +380,23 @@ figure{
         align-items: baseline;
         width: 100%;
     }
+    .bloc-restaurants__1{
+        @media (min-width: 500px) {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        }
+    }
+    .bloc-restaurants__2{
+        @media (min-width: 500px) {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        }
+    }
 }
 
-.icone__banniere{
+.icone-banniere{
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -373,13 +409,16 @@ figure{
     transition: 600ms;
         &:hover{
             color: transparent;
-            & .icone__banniere__fav{
+            & .icone-banniere__fav{
                 opacity: 1;
             }       
     }
     &__fav {
         position: absolute;
         background: linear-gradient(350deg, $color-primary 0%, $color-secondary 100%);
+        background-clip: content-box;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         opacity: 0;
         z-index: -1;
     }
@@ -496,7 +535,6 @@ figure{
         max-width: 80%;
         min-width: 60%;
         h4{
-            display: flex;
             margin-top: 15px;
             margin-bottom: 4px;
             font-size: 18px;
@@ -505,7 +543,6 @@ figure{
             text-overflow: ellipsis;
         }
         p{
-            display: flex;
             margin-top: 0px;
             margin-bottom: 15px;
             font-size: 15px;
@@ -535,30 +572,16 @@ figure{
         background-color: $color-tertiary;
         color: white;
         border-radius: 0px 12px 12px 0px;
-        transform: translate(100%);
-        transition: transform 600ms ease-in-out, display 600ms ease-in-out;
-    
+        animation: selection 0.8s ease-in-out;
         i{
             display: flex;
             justify-content: center;
             align-items: center;
-            transform: rotate(180deg);
-            transition: transform 600ms;
+            animation: logo 300ms ease-out;
+            animation-delay: 0.5s;
         }
     }
 }
-
-    @keyframes apparition {
-        from {
-            opacity:0;
-            transform: translateY(100%);
-            transition: transform;
-        }
-        to {
-            opacity: 1;
-            transform: translate(0%);
-        }
-    }
 
 .choix__1{
     animation: apparition 0.8s ease-in-out;

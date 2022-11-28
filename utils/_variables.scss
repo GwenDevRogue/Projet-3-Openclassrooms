@@ -1,0 +1,15 @@
+
+@mixin mise-en-forme{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+$color-primary:#9356DC;
+$color-secondary:#FF79DA;
+$color-tertiary:#99E2D0;
+$size: 10px;
+$num-bars: 5;
+$anim-dur: 1000ms;
+$anim-delay: $anim-dur / $num-bars;
