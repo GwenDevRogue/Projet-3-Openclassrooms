@@ -1,0 +1,284 @@
+.bloc_page_menu__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    h1{
+        width: 100%;
+        display: flex;
+        justify-content:center;
+        position: relative;
+        margin: 0px;
+        z-index: 1;
+    }
+    .header__icone{
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 30px;
+        position: absolute;
+        width: 85%;
+        color: black;
+        font-size:x-large;
+        z-index: 2;
+        a{
+            color: black;
+        }
+    }
+}
+
+.image-banniere img{ /*IMAGE PRINCIPAL POUR CHAQUE RESTAURANTS*/
+    height: 300px;
+    object-fit: cover;
+    width: 100%;
+    margin: 0px;
+    z-index: 1;
+    position: relative;
+}
+
+.bloc-plats{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @media (min-width: 900px) {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.menu{ /*ENTREES PLATS DESSERTS*/
+    padding: 10px;
+    background-color: #F8F8F8;
+    border-radius: 20px 20px 0px 0px;
+    margin-top: -65px;
+    z-index: 2;
+    position: relative;
+    .menu__header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        margin: 0px;
+        padding-left: 10px;
+        padding-right: 30px;
+        font-size: 18px;
+    }
+    h2{
+        font-family: 'Shrikhand', Arial, Helvetica, sans-serif;
+    }
+    i{
+        font-size: 25px;
+        cursor: pointer;
+    }
+    .Plats{
+        width: 100%;
+        margin-bottom: 40px;
+        margin-top: 0px;
+        @media (min-width: 900px) {
+            margin: 15px;
+            width:33%;
+        }
+    }
+    h3{
+        padding-left: 5px;
+        margin: 0px 0px 10px 0px;
+        font-weight: 300;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+    .barre{
+        border-bottom: solid $color-tertiary 3px;
+        width: 40px;
+        margin-left: 5px;
+        margin-bottom: 10px;
+        margin-top: 0px;
+        @media (min-width: 500px) {
+            margin-bottom: 20px;
+        }
+        @media (min-width: 900px) {
+            margin-bottom: 20px;
+        }
+    }
+    form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    .bouton{
+        padding-left: 45px;
+        padding-right: 45px;
+        font-size: 16px;
+    }
+}
+
+.Plats__choix{ /*LES DIFFERENTS CHOIX*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 2px 2px 6px gray;
+    overflow: hidden;
+    cursor: pointer;
+    &:hover > .logo-valide {
+        transform: translate(0);
+        display: flex;
+        & i{
+            transform: rotate(0deg);
+        }
+        &:active > .logo-valide {
+            transform: translate(0);
+            display: flex;
+            & i{
+                transform: rotate(0deg);
+            }
+        }
+    }
+    @media (min-width: 500px) {
+        margin-bottom: 20px;
+    }
+
+    @media (min-width: 900px) {
+        margin-bottom: 20px;
+    }
+    .texte{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        flex: 1;
+        padding-left: 10px;
+        border-radius: 12px 0px 0px 12px;
+        max-width: 80%;
+        min-width: 60%;
+        h4{
+            margin-top: 15px;
+            margin-bottom: 4px;
+            font-size: 18px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        p{
+            margin-top: 0px;
+            margin-bottom: 15px;
+            font-size: 15px;
+            font-weight: 300;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    .prix{
+        display: flex;
+        justify-content:center;
+        align-items:flex-end;
+        max-width: 40%;
+        min-width: 20%;
+        p{
+            font-size: 15px;
+            font-weight: 700;
+        }
+    }
+    .logo-valide{
+        display: none;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+        height: auto;
+        background-color: $color-tertiary;
+        color: white;
+        border-radius: 0px 12px 12px 0px;
+        animation: selection 0.8s ease-in-out;
+        i{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: logo 300ms ease-out;
+            animation-delay: 0.5s;
+        }
+    }
+}
+
+.choix__1{
+    animation: apparition 0.8s ease-in-out;
+    transform-origin: bottom;
+}
+.choix__2{
+    animation: apparition 0.8s ease-in-out;
+    transform-origin: bottom;
+    animation-delay: 100ms;
+}
+.choix__3{
+    animation: apparition 0.8s ease-in-out;
+    transform-origin: bottom;
+    animation-delay: 200ms;
+}
+.choix__4{
+    animation: apparition 0.8s ease-in-out;
+    transform-origin: bottom;
+    animation-delay: 300ms;
+}
+.choix__5{
+    animation: apparition 0.8s ease-in-out;
+    transform-origin: bottom;
+    animation-delay: 400ms;
+}
+.choix__6{
+    animation: apparition 0.8s ease-in-out;
+    transform-origin: bottom;
+    animation-delay: 500ms;
+}
+.choix__7{
+    animation: apparition 0.8s ease-in-out;
+    transform-origin: bottom;
+    animation-delay: 600ms;
+}
+.choix__8{
+    animation: apparition 0.8s ease-in-out;
+    transform-origin: bottom;
+    animation-delay: 700ms;
+}
+.choix__9{
+    animation: apparition 0.8s ease-in-out;
+    transform-origin: bottom;
+    animation-delay: 800ms;
+}
+.choix__10{
+    animation: apparition 0.8s ease-in-out;
+    transform-origin: bottom;
+    animation-delay: 900ms;
+}
+
+.bloc_page_menu__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    h1{
+        width: 100%;
+        display: flex;
+        justify-content:center;
+        position: relative;
+        margin: 0px;
+        z-index: 1;
+    }
+    .header__icone{
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 30px;
+        position: absolute;
+        width: 85%;
+        color: black;
+        font-size:x-large;
+        z-index: 2;
+        a{
+            color: black;
+        }
+    }
+}

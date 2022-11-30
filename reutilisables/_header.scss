@@ -1,0 +1,17 @@
+header{
+    @include mise-en-forme;
+    h1 {
+        width: 100%;
+        font-family: 'Shrikhand', Arial, Helvetica, sans-serif;
+        text-align: center;
+        margin: 5px;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 34px;
+        font-style: normal;
+        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        @media (min-width: 900px) {
+            font-size: 50px;         
+        }
+    }
+}

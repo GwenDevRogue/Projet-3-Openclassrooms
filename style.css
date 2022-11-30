@@ -135,6 +135,144 @@ body {
   }
 }
 
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+header h1 {
+  width: 100%;
+  font-family: "Shrikhand", Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin: 5px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 34px;
+  font-style: normal;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+@media (min-width: 900px) {
+  header h1 {
+    font-size: 50px;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: #353636;
+  color: white;
+  padding: 20px;
+}
+footer h2 {
+  font-family: "Shrikhand", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+@media (min-width: 700px) {
+  footer h2 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 20px;
+  }
+}
+footer a {
+  color: white;
+}
+footer .block-lien {
+  display: block;
+  flex-direction: column;
+}
+@media (min-width: 700px) {
+  footer .block-lien {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+footer .lien-footer {
+  display: flex;
+  flex-direction: row;
+}
+footer .lien-footer p {
+  align-items: baseline;
+  padding-top: 0px;
+  margin: 0px;
+  margin-bottom: 7px;
+  white-space: nowrap;
+  width: 85%;
+}
+@media (min-width: 700px) {
+  footer .lien-footer p {
+    padding-right: 40px;
+  }
+}
+footer .lien-footer .icone {
+  width: 15%;
+  padding: 0px;
+}
+@media (min-width: 700px) {
+  footer .lien-footer .icone {
+    padding-right: 10px;
+  }
+}
+footer .lien-footer i {
+  padding: 0px;
+}
+
+.bouton {
+  border-radius: 20px 20px 20px 20px;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  padding: 15px 25px 15px 25px;
+  box-shadow: 2px 2px 3px gray;
+  cursor: pointer;
+  background: linear-gradient(0deg, #9356DC, #FF79DA);
+  transition: box-shadow 200ms;
+  transition-delay: 200ms;
+  position: relative;
+}
+.bouton:hover {
+  box-shadow: 2px 2px 6px gray;
+  background-image: linear-gradient(0deg, #b37bf8, #fa90dc);
+}
+
+.icone-banniere {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+  font-size: 25px;
+  position: relative;
+  color: black;
+  z-index: 1;
+  opacity: 1;
+  transition: 600ms;
+}
+.icone-banniere:hover {
+  color: transparent;
+}
+.icone-banniere:hover .icone-banniere__fav {
+  opacity: 1;
+}
+.icone-banniere__fav {
+  position: absolute;
+  background: linear-gradient(350deg, #9356DC 0%, #FF79DA 100%);
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  z-index: -1;
+}
+
 .loader {
   display: flex;
   position: fixed;
@@ -182,59 +320,6 @@ body {
           animation-delay: 1000ms;
 }
 
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-header h1 {
-  width: 100%;
-  font-family: "Shrikhand", Arial, Helvetica, sans-serif;
-  text-align: center;
-  margin: 5px;
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 34px;
-  font-style: normal;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-}
-@media (min-width: 900px) {
-  header h1 {
-    font-size: 50px;
-  }
-}
-
-.bloc_page_menu__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
-.bloc_page_menu__header h1 {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  margin: 0px;
-  z-index: 1;
-}
-.bloc_page_menu__header .header__icone {
-  display: flex;
-  justify-content: flex-start;
-  padding-left: 30px;
-  position: absolute;
-  width: 85%;
-  color: black;
-  font-size: x-large;
-  z-index: 2;
-}
-.bloc_page_menu__header .header__icone a {
-  color: black;
-}
-
 .localisation { /*LOCALISATION PAGE ACCEUIL*/
   display: flex;
   justify-content: center;
@@ -272,27 +357,6 @@ header h1 {
   text-align: center;
   font-size: 18px;
   font-style: normal;
-}
-
-.bouton { /*BOUTONS DU SITE*/
-  border-radius: 20px 20px 20px 20px;
-  border: none;
-  font-size: 15px;
-  font-weight: 600;
-  color: white;
-  padding: 15px 25px 15px 25px;
-  box-shadow: 2px 2px 3px gray;
-  cursor: pointer;
-  background: linear-gradient(0deg, #9356DC, #FF79DA);
-  transform: scale(1);
-  transition: transform 250ms, box-shadow 200ms;
-  transition-delay: 100ms, 200ms;
-  position: relative;
-}
-.bouton:hover {
-  transform: scale(1.05);
-  box-shadow: 2px 2px 6px gray;
-  background-image: linear-gradient(0deg, #b37bf8, #fa90dc);
 }
 
 .Fonctionnement {
@@ -508,7 +572,7 @@ figure p {
   font-weight: 200;
 }
 
-.bloc-restaurants { /*MENUS PROPOSE POUR CHAQUE RESTAURANTS*/
+.bloc-restaurants { /*ENSSEMBLE DES 4 VIGNETTES RESTAURANTS*/
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -545,32 +609,34 @@ figure p {
   }
 }
 
-.icone-banniere {
+.bloc_page_menu__header {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  font-size: 25px;
+  flex-direction: row;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.bloc_page_menu__header h1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
   position: relative;
-  color: black;
+  margin: 0px;
   z-index: 1;
-  opacity: 1;
-  transition: 600ms;
 }
-.icone-banniere:hover {
-  color: transparent;
-}
-.icone-banniere:hover .icone-banniere__fav {
-  opacity: 1;
-}
-.icone-banniere__fav {
+.bloc_page_menu__header .header__icone {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 30px;
   position: absolute;
-  background: linear-gradient(350deg, #9356DC 0%, #FF79DA 100%);
-  background-clip: content-box;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  opacity: 0;
-  z-index: -1;
+  width: 85%;
+  color: black;
+  font-size: x-large;
+  z-index: 2;
+}
+.bloc_page_menu__header .header__icone a {
+  color: black;
 }
 
 .image-banniere img { /*IMAGE PRINCIPAL POUR CHAQUE RESTAURANTS*/
@@ -684,6 +750,13 @@ figure p {
   display: flex;
 }
 .Plats__choix:hover > .logo-valide i {
+  transform: rotate(0deg);
+}
+.Plats__choix:hover > .logo-valide:active > .logo-valide {
+  transform: translate(0);
+  display: flex;
+}
+.Plats__choix:hover > .logo-valide:active > .logo-valide i {
   transform: rotate(0deg);
 }
 @media (min-width: 500px) {
@@ -834,70 +907,32 @@ figure p {
           animation-delay: 900ms;
 }
 
-footer {
+.bloc_page_menu__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.bloc_page_menu__header h1 {
+  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
-  background-color: #353636;
-  color: white;
-  padding: 20px;
-}
-footer h2 {
-  font-family: "Shrikhand", Arial, Helvetica, sans-serif;
-  font-size: 18px;
-}
-@media (min-width: 700px) {
-  footer h2 {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    font-size: 20px;
-  }
-}
-footer a {
-  color: white;
-}
-footer .block-lien {
-  display: block;
-  flex-direction: column;
-}
-@media (min-width: 700px) {
-  footer .block-lien {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-}
-footer .lien-footer {
-  display: flex;
-  flex-direction: row;
-}
-footer .lien-footer p {
-  align-items: baseline;
-  padding-top: 0px;
+  position: relative;
   margin: 0px;
-  margin-bottom: 7px;
-  white-space: nowrap;
+  z-index: 1;
+}
+.bloc_page_menu__header .header__icone {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 30px;
+  position: absolute;
   width: 85%;
+  color: black;
+  font-size: x-large;
+  z-index: 2;
 }
-@media (min-width: 700px) {
-  footer .lien-footer p {
-    padding-right: 40px;
-  }
-}
-footer .lien-footer .icone {
-  width: 15%;
-  padding: 0px;
-}
-@media (min-width: 700px) {
-  footer .lien-footer .icone {
-    padding-right: 10px;
-  }
-}
-footer .lien-footer i {
-  padding: 0px;
+.bloc_page_menu__header .header__icone a {
+  color: black;
 }/*# sourceMappingURL=style.css.map */
