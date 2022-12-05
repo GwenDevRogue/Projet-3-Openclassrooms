@@ -62,46 +62,6 @@
     transform: translate(0%);
   }
 }
-@-webkit-keyframes selection {
-  from {
-    opacity: 0;
-    transform: translateX(100%);
-    transition: transform;
-  }
-  to {
-    opacity: 1;
-    transform: translate(0%);
-  }
-}
-@keyframes selection {
-  from {
-    opacity: 0;
-    transform: translateX(100%);
-    transition: transform;
-  }
-  to {
-    opacity: 1;
-    transform: translate(0%);
-  }
-}
-@-webkit-keyframes logo {
-  from {
-    transform: rotate(180deg);
-    transition: transform;
-  }
-  to {
-    transform: rotate(0deg);
-  }
-}
-@keyframes logo {
-  from {
-    transform: rotate(180deg);
-    transition: transform;
-  }
-  to {
-    transform: rotate(0deg);
-  }
-}
 body {
   display: flex;
   margin: 0px;
@@ -746,17 +706,24 @@ figure p {
   cursor: pointer;
 }
 .Plats__choix:hover > .logo-valide {
-  transform: translate(0);
-  display: flex;
+  margin-right: 0;
+  /*& .prix{
+              transform: translate(50px);
+          }
+  */
 }
 .Plats__choix:hover > .logo-valide i {
   transform: rotate(0deg);
 }
-.Plats__choix:hover > .logo-valide:active > .logo-valide {
+.Plats__choix:hover > .logo-valide:hover > .prix {
   transform: translate(0);
   display: flex;
 }
-.Plats__choix:hover > .logo-valide:active > .logo-valide i {
+.Plats__choix:active > .logo-valide {
+  transform: translate(0);
+  display: flex;
+}
+.Plats__choix:active > .logo-valide i {
   transform: rotate(0deg);
 }
 @media (min-width: 500px) {
@@ -808,7 +775,7 @@ figure p {
   font-weight: 700;
 }
 .Plats__choix .logo-valide {
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 20%;
@@ -816,17 +783,16 @@ figure p {
   background-color: #99E2D0;
   color: white;
   border-radius: 0px 12px 12px 0px;
-  -webkit-animation: selection 0.8s ease-in-out;
-          animation: selection 0.8s ease-in-out;
+  margin-right: -20%;
+  transition-duration: 400ms;
 }
 .Plats__choix .logo-valide i {
   display: flex;
   justify-content: center;
   align-items: center;
-  -webkit-animation: logo 300ms ease-out;
-          animation: logo 300ms ease-out;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  transform: rotate(360deg);
+  transition-delay: 100ms;
+  transition-duration: 300ms;
 }
 
 .choix__1 {

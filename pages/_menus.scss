@@ -125,17 +125,24 @@
     overflow: hidden;
     cursor: pointer;
     &:hover > .logo-valide {
+        margin-right: 0;
+        & i{
+            transform: rotate(0deg);
+        }
+        /*& .prix{
+            transform: translate(50px);
+        }
+*/
+        &:hover > .prix {
+            transform: translate(0);
+            display: flex;
+        }
+    }
+    &:active > .logo-valide {
         transform: translate(0);
         display: flex;
         & i{
             transform: rotate(0deg);
-        }
-        &:active > .logo-valide {
-            transform: translate(0);
-            display: flex;
-            & i{
-                transform: rotate(0deg);
-            }
         }
     }
     @media (min-width: 500px) {
@@ -184,7 +191,7 @@
         }
     }
     .logo-valide{
-        display: none;
+        display:flex;
         justify-content: center;
         align-items: center;
         width: 20%;
@@ -192,13 +199,15 @@
         background-color: $color-tertiary;
         color: white;
         border-radius: 0px 12px 12px 0px;
-        animation: selection 0.8s ease-in-out;
+        margin-right: -20%;
+        transition-duration: 400ms;
         i{
             display: flex;
             justify-content: center;
             align-items: center;
-            animation: logo 300ms ease-out;
-            animation-delay: 0.5s;
+            transform: rotate(360deg);
+            transition-delay: 100ms;
+            transition-duration: 300ms;
         }
     }
 }
