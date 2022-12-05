@@ -129,22 +129,14 @@
         & i{
             transform: rotate(0deg);
         }
-        /*& .prix{
-            transform: translate(50px);
-        }
-*/
-        &:hover > .prix {
-            transform: translate(0);
-            display: flex;
-        }
     }
     &:active > .logo-valide {
-        transform: translate(0);
-        display: flex;
+        margin-right: 0;
         & i{
             transform: rotate(0deg);
         }
     }
+
     @media (min-width: 500px) {
         margin-bottom: 20px;
     }

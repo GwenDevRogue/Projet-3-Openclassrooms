@@ -707,21 +707,12 @@ figure p {
 }
 .Plats__choix:hover > .logo-valide {
   margin-right: 0;
-  /*& .prix{
-              transform: translate(50px);
-          }
-  */
 }
 .Plats__choix:hover > .logo-valide i {
   transform: rotate(0deg);
 }
-.Plats__choix:hover > .logo-valide:hover > .prix {
-  transform: translate(0);
-  display: flex;
-}
 .Plats__choix:active > .logo-valide {
-  transform: translate(0);
-  display: flex;
+  margin-right: 0;
 }
 .Plats__choix:active > .logo-valide i {
   transform: rotate(0deg);
